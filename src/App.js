@@ -3,6 +3,7 @@ import ActorCard from "./components/ActorCard";
 import ActorDetail from "./components/ActorDetail";
 import Loading from "./components/Loading";
 import Error from "./components/Error";
+import starwarsImage from "./images/starwars.png";
 import "./App.css";
 
 const App = () => {
@@ -32,7 +33,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1 className="title">Starwars Actors</h1>
+      <img src={starwarsImage} alt="Starwars" loading="lazy" className="img" />
       <div className={`actor-list ${selectedActor ? "blur-background" : ""}`}>
         {actors.map((actor) => (
           <ActorCard

@@ -1,9 +1,10 @@
 .app {
   text-align: center;
 }
-/* .app .title {
-  color: white;
-} */
+.app .img {
+  width: 180px;
+  margin-top: 20px;
+}
 .actor-list {
   display: flex;
   flex-wrap: wrap;
