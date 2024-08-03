@@ -3,7 +3,7 @@ import "./ActorCard.css";
 
 const ActorCard = ({ actor, onDetailClick }) => {
   return (
-    <div className="actor-card card">
+    <div className="actor-card">
       <h2>{actor.name}</h2>
       <div className="actor-card__details">
         <p>Height: {actor.height}</p>
