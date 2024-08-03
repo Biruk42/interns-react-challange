@@ -1,0 +1,75 @@
+.actor-card {
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
+  width: 190px;
+  height: 254px;
+  border-radius: 30px;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -5px -5px 20px rgb(60, 60, 60);
+}
+
+.actor-card h2 {
+  font-size: 1.5em;
+  color: #f5f5f5;
+}
+
+.actor-card p {
+  font-size: 1em;
+  color: #f5f5f5;
+}
+.actor-card .actor-card__details {
+  margin-left: 13%;
+}
+.actor-card .actor-card__details p {
+  text-align: left;
+}
+.actor-card button {
+  --glow-color: rgb(247, 215, 12);
+  --glow-spread-color: rgba(255, 223, 0, 0.5);
+  --enhanced-glow-color: rgba(255, 240, 0, 0.8);
+  --btn-color: rgb(255, 223, 0);
+  border: 0.25em solid var(--glow-color);
+  margin-top: 2.5rem;
+  padding: 0.4em 2em;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 0.5em 0.1em var(--glow-color),
+    0 0 2em 0.5em var(--glow-spread-color),
+    inset 0 0 0.4em 0.1em var(--glow-color);
+  text-shadow: 0 0 0.3em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.actor-card button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(1em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(-35deg) scale(1, 0.6);
+}
+
+.actor-card button:hover {
+  background-color: var(--glow-color);
+  box-shadow: 0 0 0.5em 0.1em var(--glow-color),
+    0 0 2em 0.5em var(--glow-spread-color),
+    inset 0 0 0.4em 0.1em var(--glow-color);
+}
+
+.actor-card button:active {
+  box-shadow: 0 0 0.3em 0.1em var(--glow-color),
+    0 0 1.5em 0.5em var(--glow-spread-color),
+    inset 0 0 0.3em 0.1em var(--glow-color);
+}
